@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf6fc">
+  <title>Умножко — малки задачи, големи победи</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="brand"><a href="index.html" aria-label="Умножко — начало"><span class="brand-mark">×</span><span>умножко<span class="brand-dot">.</span></span></a><span class="brand-label">УЧИ · ИГРАЙ · РАСТИ</span></header>
+    <section id="start-screen" aria-labelledby="start-title">
+      <div class="hero"><div class="hero-spark spark-one">✦</div><div class="mascot" aria-hidden="true"><span class="eye left"></span><span class="eye right"></span><span class="smile"></span><span class="cheek"></span></div><div class="hero-spark spark-two">✧</div><span class="hero-pill">МАЛКА ИГРА. ГОЛЕМИ ПОБЕДИ.</span><h1 id="start-title">Умножавай.<br>Играй. <span>Заблести!</span></h1><p>Таблицата за умножение е по-забавна,<br>когато всяка задача е малка победа.</p></div>
+      <div class="card setup-card">
+        <div class="section-heading"><h2><span class="step">1</span> Избери таблици</h2><button id="all-tables" class="all-button" aria-pressed="true">Всички <span aria-hidden="true">✓</span></button></div>
+        <p class="hint">С кои числа ще тренираме днес?</p>
+        <div id="table-picker" class="table-grid" aria-label="Таблици за умножение"></div>
+        <div class="divider"></div>
+        <h2><span class="step">2</span> Как ще играем?</h2>
+        <div class="mode-grid"><button class="mode selected" id="easy-mode" aria-pressed="true"><span class="mode-icon" aria-hidden="true">☀</span><span><strong>Лесно</strong><small>Избери отговор</small></span><span class="radio" aria-hidden="true"></span></button><button class="mode" id="hard-mode" aria-pressed="false"><span class="mode-icon" aria-hidden="true">ϟ</span><span><strong>Трудно</strong><small>Напиши отговор</small></span><span class="radio" aria-hidden="true"></span></button></div>
+        <div class="round-facts"><span><b aria-hidden="true">▦</b> 10 въпроса</span><span class="fact-dot">·</span><span><b aria-hidden="true">◷</b> 10 сек. на въпрос</span></div>
+        <button id="start-button" class="primary">Започни! <span aria-hidden="true">→</span></button>
+        <p id="selection-message" class="selection-message" aria-live="polite"></p>
+      </div>
+      <div class="progress-card"><span class="progress-icon" aria-hidden="true">★</span><div><span class="progress-title">Всяка звезда е напредък</span><p><strong id="total-stars">0</strong> събрани звезди <span>·</span> Рекорд: <strong id="start-best">0</strong> т.</p></div><span class="progress-spark" aria-hidden="true">✧</span></div>
+      <p class="bottom-note">Малко практика всеки ден. Много увереност утре.</p>
+    </section>
+    <section id="game-screen" hidden aria-labelledby="game-title">
+      <div class="game-top"><h1 id="game-title" tabindex="-1">Време е да заблестиш!</h1><p>Можеш да се справиш. Задача по задача.</p></div>
+      <div class="game-stats"><span>Въпрос <strong id="question-count">1/10</strong></span><span>★ <strong id="score">0</strong> т.</span></div>
+      <div class="card question-card"><div class="timer-label"><span>Оставащо време</span><strong id="time-left">10 сек.</strong></div><div id="timer" class="timer" role="progressbar" aria-label="Оставащи секунди" aria-valuemin="0" aria-valuemax="10" aria-valuenow="10"><div id="timer-fill"></div></div><p id="streak" class="streak">Всяка задача е нов шанс!</p><div id="question" class="question" aria-live="polite" aria-atomic="true"></div><div id="answer-area"></div><div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true"></div><div id="confetti" class="confetti" aria-hidden="true"></div></div>
+      <p class="game-tip">Помисли, пресметни и опитай!</p>
+    </section>
+    <section id="result-screen" hidden aria-labelledby="result-title"><div class="result-hero"><span class="result-medal" aria-hidden="true">✦</span><h1 id="result-title" tabindex="-1">Браво, завърши!</h1><p id="result-message"></p></div><div class="card result-card"><div id="result-stars" class="result-stars"></div><p class="score-label">ТВОЯТ РЕЗУЛТАТ</p><div class="big-score"><span id="final-score">0</span><small> точки</small></div><div id="new-record" class="record" hidden>Нов личен рекорд! ✨</div><div class="result-details"><div><strong id="correct-count"></strong><span>верни отговора</span></div><div><strong id="round-time"></strong><span>общо време</span></div><div><strong id="best-score"></strong><span>най-добър резултат</span></div></div><button id="new-game" class="primary">Нова игра <span aria-hidden="true">↻</span></button></div><p class="bottom-note">Всяка тренировка те прави по-добър!</p></section>
+    <footer>Създадено на живо от <strong>ClawBox AI</strong></footer>
+  </main>
+</body>
+</html>
